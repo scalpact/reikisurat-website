@@ -1,0 +1,19 @@
+{
+  "name": "reikisurat-site",
+  "private": true,
+  "version": "2.0.0",
+  "description": "Shree Sai Yog & Reiki Healing Centre (Surat + Bengaluru): healing, courses, crystal shop, bookings and secure Razorpay checkout",
+  "scripts": {
+    "build": "node build/build.js",
+    "dev": "node dev-server.js"
+  },
+  "engines": { "node": ">=18" },
+  "devDependencies": {
+    "@fontsource-variable/lora": "^5.3.0",
+    "@fontsource-variable/manrope": "^5.2.5",
+    "@iconify-json/logos": "^1.2.4",
+    "@iconify-json/ph": "^1.2.2",
+    "@iconify-json/solar": "^1.2.13",
+    "@iconify/utils": "^3.1.7"
+  }
+}

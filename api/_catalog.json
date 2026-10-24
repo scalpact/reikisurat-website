@@ -1,0 +1,351 @@
+{
+ "shipping": 0,
+ "products": {
+  "natural-citrine-crystal-bracelet": {
+   "name": "Citrine Crystal Bracelet",
+   "personal": "",
+   "price": {
+    "surat": 1499,
+    "bangalore": 2249
+   }
+  },
+  "natural-money-magnet-crystal-wealth-bracelet": {
+   "name": "Money Magnet Bracelet",
+   "personal": "",
+   "price": {
+    "surat": 1499,
+    "bangalore": 2249
+   }
+  },
+  "natural-triple-protection-crystal-bracelet": {
+   "name": "Triple Protection Bracelet",
+   "personal": "",
+   "price": {
+    "surat": 1499,
+    "bangalore": 2249
+   }
+  },
+  "natural-black-tourmaline-crystal-bracelet": {
+   "name": "Black Tourmaline Bracelet",
+   "personal": "",
+   "price": {
+    "surat": 1499,
+    "bangalore": 2249
+   }
+  },
+  "natural-rose-quartz-crystal-bracelet": {
+   "name": "Rose Quartz Bracelet",
+   "personal": "",
+   "price": {
+    "surat": 1499,
+    "bangalore": 2249
+   }
+  },
+  "natural-7-chakra-crystal-bracelet": {
+   "name": "7 Chakra Bracelet",
+   "personal": "",
+   "price": {
+    "surat": 1499,
+    "bangalore": 2249
+   }
+  },
+  "natural-clear-quartz-crystal-bracelet": {
+   "name": "Clear Quartz Bracelet",
+   "personal": "",
+   "price": {
+    "surat": 1499,
+    "bangalore": 2249
+   }
+  },
+  "natural-rock-crystal-bracelet-certified": {
+   "name": "Certified Rock Crystal Bracelet",
+   "personal": "",
+   "price": {
+    "surat": 1499,
+    "bangalore": 2249
+   }
+  },
+  "natural-amazonite-crystal-bracelet": {
+   "name": "Amazonite Bracelet",
+   "personal": "",
+   "price": {
+    "surat": 1499,
+    "bangalore": 2249
+   }
+  },
+  "natural-aquamarine-crystal-bracelet": {
+   "name": "Aquamarine Bracelet",
+   "personal": "",
+   "price": {
+    "surat": 1499,
+    "bangalore": 2249
+   }
+  },
+  "natural-carnelian-crystal-bracelet": {
+   "name": "Carnelian Bracelet",
+   "personal": "",
+   "price": {
+    "surat": 1499,
+    "bangalore": 2249
+   }
+  },
+  "natural-red-carnelian-crystal-bracelet": {
+   "name": "Red Carnelian Bracelet",
+   "personal": "",
+   "price": {
+    "surat": 1499,
+    "bangalore": 2249
+   }
+  },
+  "natural-brown-tiger-eye-crystal-bracelet": {
+   "name": "Tiger Eye Bracelet",
+   "personal": "",
+   "price": {
+    "surat": 1499,
+    "bangalore": 2249
+   }
+  },
+  "natural-green-aventurine-crystal-bracelet": {
+   "name": "Green Aventurine Bracelet",
+   "personal": "",
+   "price": {
+    "surat": 1499,
+    "bangalore": 2249
+   }
+  },
+  "natural-aaa-kyanite-crystal-bracelet": {
+   "name": "Kyanite Bracelet",
+   "personal": "",
+   "price": {
+    "surat": 1499,
+    "bangalore": 2249
+   }
+  },
+  "numerology-bracelet": {
+   "name": "Numerology Bracelet",
+   "personal": "numerology",
+   "price": {
+    "surat": 850,
+    "bangalore": 1275
+   }
+  },
+  "natural-tiger-eye-round-crystal-dowsing-pendulum": {
+   "name": "Tiger Eye Dowsing Pendulum",
+   "personal": "",
+   "price": {
+    "surat": 399,
+    "bangalore": 599
+   }
+  },
+  "black-tourmaline-selenite-protection-hanging-reiki-energized": {
+   "name": "Tourmaline & Selenite Protection Hanging",
+   "personal": "",
+   "price": {
+    "surat": 649,
+    "bangalore": 974
+   }
+  },
+  "natural-7-chakra-oval-palm-stones-set": {
+   "name": "7 Chakra Palm Stones Set",
+   "personal": "",
+   "price": {
+    "surat": 1299,
+    "bangalore": 1949
+   }
+  },
+  "reiki-charged-amethyst-cluster": {
+   "name": "Amethyst Cluster",
+   "personal": "",
+   "price": {
+    "surat": 2200,
+    "bangalore": 3300
+   }
+  },
+  "natural-amethyst-crystal": {
+   "name": "Amethyst Crystal",
+   "personal": "",
+   "price": {
+    "surat": 450,
+    "bangalore": 675
+   }
+  },
+  "crystal-tree-seven-chakra": {
+   "name": "7 Chakra Crystal Tree",
+   "personal": "",
+   "price": {
+    "surat": 1350,
+    "bangalore": 2025
+   }
+  },
+  "shree-yantra-brass": {
+   "name": "Shree Yantra (Brass)",
+   "personal": "",
+   "price": {
+    "surat": 1100,
+    "bangalore": 1650
+   }
+  }
+ },
+ "services": {
+  "reiki-healing": {
+   "name": "Reiki Healing Session",
+   "mins": 60,
+   "modes": [
+    "offline",
+    "online"
+   ],
+   "price": {
+    "surat": 500,
+    "bangalore": 750
+   }
+  },
+  "crystal-healing": {
+   "name": "Crystal Healing Therapy",
+   "mins": 60,
+   "modes": [
+    "offline"
+   ],
+   "price": {
+    "surat": 600,
+    "bangalore": 900
+   }
+  },
+  "evil-eye": {
+   "name": "Evil Eye (Nazar) Removal",
+   "mins": 45,
+   "modes": [
+    "offline",
+    "online"
+   ],
+   "price": {
+    "surat": 500,
+    "bangalore": 750
+   }
+  },
+  "meditation": {
+   "name": "Guided Meditation Class",
+   "mins": 60,
+   "modes": [
+    "offline",
+    "online"
+   ],
+   "price": {
+    "surat": 500,
+    "bangalore": 750
+   }
+  },
+  "student-exams": {
+   "name": "Reiki for Students (Exams)",
+   "mins": 15,
+   "modes": [
+    "offline",
+    "online"
+   ],
+   "price": {
+    "surat": 200,
+    "bangalore": 300
+   }
+  }
+ },
+ "event": {
+  "active": true,
+  "title": "Heal Stress and Anxiety with Reiki",
+  "fee": 0
+ },
+ "booking": {
+  "_help": "Booking calendar. days: 0 = Sunday, 1 = Monday ... 6 = Saturday. times use 24-hour HH:MM. 'dates' (YYYY-MM-DD list) overrides 'days' when not empty, use it to open only specific dates. 'closed' lists holidays. daysAhead = how far ahead people can book. Run `npm run build` after editing.",
+  "daysAhead": 21,
+  "minHoursNotice": 3,
+  "surat": {
+   "offline": {
+    "days": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ],
+    "dates": [],
+    "times": [
+     "10:00",
+     "11:00",
+     "12:00",
+     "15:00",
+     "16:00",
+     "17:00"
+    ]
+   },
+   "online": {
+    "days": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ],
+    "dates": [],
+    "times": [
+     "08:00",
+     "09:00",
+     "10:00",
+     "11:00",
+     "12:00",
+     "14:00",
+     "15:00",
+     "16:00",
+     "17:00",
+     "18:00",
+     "19:00",
+     "20:00"
+    ]
+   },
+   "closed": []
+  },
+  "bangalore": {
+   "offline": {
+    "days": [
+     5,
+     6,
+     0
+    ],
+    "dates": [],
+    "times": [
+     "10:00",
+     "11:30",
+     "15:00",
+     "16:30"
+    ]
+   },
+   "online": {
+    "days": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ],
+    "dates": [],
+    "times": [
+     "08:00",
+     "09:00",
+     "10:00",
+     "11:00",
+     "12:00",
+     "14:00",
+     "15:00",
+     "16:00",
+     "17:00",
+     "18:00",
+     "19:00",
+     "20:00"
+    ]
+   },
+   "closed": []
+  }
+ }
+}

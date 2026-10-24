@@ -1,0 +1,24 @@
+{
+ "_help": "Bengaluru seminar settings. Fill date, time and venue when fixed (leave empty to show 'shared on WhatsApp'). fee = 0 means free registration (seat request goes to WhatsApp). Put a number like 499 to collect the fee online by Razorpay before the seat request is sent. Set active to false to hide the seminar everywhere. Run `npm run build` after editing.",
+ "active": true,
+ "slug": "seminar",
+ "title": "Heal Stress and Anxiety with Reiki",
+ "kicker": "Bengaluru Reiki Seminar",
+ "date": "",
+ "time": "",
+ "venue": "",
+ "mapLink": "",
+ "fee": 0,
+ "seatsNote": "Seats are limited. Registration is confirmed on WhatsApp.",
+ "whatsapp": "917975131189",
+ "phone": "+91 79751 31189",
+ "topics": [
+  { "t": "Shaktipaath / Attunement", "d": "Receive a Reiki attunement from the Grand Masters in person." },
+  { "t": "Reiki Healing for All", "d": "Simple self-healing you can practise every day, at any age." },
+  { "t": "Distance Healing", "d": "How Reiki is sent to family members in other cities." },
+  { "t": "Health Support", "d": "Using Reiki alongside your doctor’s treatment, not instead of it." },
+  { "t": "Stress Relief", "d": "Breathing and hand positions that calm the mind and help sleep." },
+  { "t": "Clear Blockages for Success", "d": "Working on the chakras linked to confidence, money and work." }
+ ],
+ "benefits": ["Stress relief", "Anxiety management", "Emotional healing", "Energy balancing", "Distance Reiki", "Health support", "Personal growth"]
+}

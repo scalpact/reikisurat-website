@@ -1,0 +1,230 @@
+{
+ "_help": "All prices in rupees. Change a number, run `npm run build`, then deploy. 'surat' is the Surat price, 'bangalore' is the Bengaluru price. For courses, null means 'Ask fee on WhatsApp'; put a number to show the fee.",
+ "products": {
+  "natural-citrine-crystal-bracelet": {
+   "name": "Citrine Crystal Bracelet",
+   "surat": 1499,
+   "bangalore": 2249,
+   "mrp_surat": 1600,
+   "mrp_bangalore": 2400
+  },
+  "natural-money-magnet-crystal-wealth-bracelet": {
+   "name": "Money Magnet Bracelet",
+   "surat": 1499,
+   "bangalore": 2249,
+   "mrp_surat": 1600,
+   "mrp_bangalore": 2400
+  },
+  "natural-triple-protection-crystal-bracelet": {
+   "name": "Triple Protection Bracelet",
+   "surat": 1499,
+   "bangalore": 2249,
+   "mrp_surat": 1600,
+   "mrp_bangalore": 2400
+  },
+  "natural-black-tourmaline-crystal-bracelet": {
+   "name": "Black Tourmaline Bracelet",
+   "surat": 1499,
+   "bangalore": 2249,
+   "mrp_surat": 1600,
+   "mrp_bangalore": 2400
+  },
+  "natural-rose-quartz-crystal-bracelet": {
+   "name": "Rose Quartz Bracelet",
+   "surat": 1499,
+   "bangalore": 2249,
+   "mrp_surat": 1600,
+   "mrp_bangalore": 2400
+  },
+  "natural-7-chakra-crystal-bracelet": {
+   "name": "7 Chakra Bracelet",
+   "surat": 1499,
+   "bangalore": 2249,
+   "mrp_surat": 1600,
+   "mrp_bangalore": 2400
+  },
+  "natural-clear-quartz-crystal-bracelet": {
+   "name": "Clear Quartz Bracelet",
+   "surat": 1499,
+   "bangalore": 2249,
+   "mrp_surat": 1600,
+   "mrp_bangalore": 2400
+  },
+  "natural-rock-crystal-bracelet-certified": {
+   "name": "Certified Rock Crystal Bracelet",
+   "surat": 1499,
+   "bangalore": 2249,
+   "mrp_surat": 1600,
+   "mrp_bangalore": 2400
+  },
+  "natural-amazonite-crystal-bracelet": {
+   "name": "Amazonite Bracelet",
+   "surat": 1499,
+   "bangalore": 2249,
+   "mrp_surat": 1600,
+   "mrp_bangalore": 2400
+  },
+  "natural-aquamarine-crystal-bracelet": {
+   "name": "Aquamarine Bracelet",
+   "surat": 1499,
+   "bangalore": 2249,
+   "mrp_surat": 1600,
+   "mrp_bangalore": 2400
+  },
+  "natural-carnelian-crystal-bracelet": {
+   "name": "Carnelian Bracelet",
+   "surat": 1499,
+   "bangalore": 2249,
+   "mrp_surat": 1600,
+   "mrp_bangalore": 2400
+  },
+  "natural-red-carnelian-crystal-bracelet": {
+   "name": "Red Carnelian Bracelet",
+   "surat": 1499,
+   "bangalore": 2249,
+   "mrp_surat": 1600,
+   "mrp_bangalore": 2400
+  },
+  "natural-brown-tiger-eye-crystal-bracelet": {
+   "name": "Tiger Eye Bracelet",
+   "surat": 1499,
+   "bangalore": 2249,
+   "mrp_surat": 1600,
+   "mrp_bangalore": 2400
+  },
+  "natural-green-aventurine-crystal-bracelet": {
+   "name": "Green Aventurine Bracelet",
+   "surat": 1499,
+   "bangalore": 2249,
+   "mrp_surat": 1600,
+   "mrp_bangalore": 2400
+  },
+  "natural-aaa-kyanite-crystal-bracelet": {
+   "name": "Kyanite Bracelet",
+   "surat": 1499,
+   "bangalore": 2249,
+   "mrp_surat": 1600,
+   "mrp_bangalore": 2400
+  },
+  "numerology-bracelet": {
+   "name": "Numerology Bracelet",
+   "surat": 850,
+   "bangalore": 1275,
+   "mrp_surat": 1200,
+   "mrp_bangalore": 1800
+  },
+  "natural-tiger-eye-round-crystal-dowsing-pendulum": {
+   "name": "Tiger Eye Dowsing Pendulum",
+   "surat": 399,
+   "bangalore": 599,
+   "mrp_surat": 500,
+   "mrp_bangalore": 750
+  },
+  "black-tourmaline-selenite-protection-hanging-reiki-energized": {
+   "name": "Tourmaline & Selenite Protection Hanging",
+   "surat": 649,
+   "bangalore": 974,
+   "mrp_surat": 999,
+   "mrp_bangalore": 1499
+  },
+  "natural-7-chakra-oval-palm-stones-set": {
+   "name": "7 Chakra Palm Stones Set",
+   "surat": 1299,
+   "bangalore": 1949,
+   "mrp_surat": 1499,
+   "mrp_bangalore": 2249
+  },
+  "reiki-charged-amethyst-cluster": {
+   "name": "Amethyst Cluster",
+   "surat": 2200,
+   "bangalore": 3300,
+   "mrp_surat": 3000,
+   "mrp_bangalore": 4500
+  },
+  "natural-amethyst-crystal": {
+   "name": "Amethyst Crystal",
+   "surat": 450,
+   "bangalore": 675,
+   "mrp_surat": 600,
+   "mrp_bangalore": 900
+  },
+  "crystal-tree-seven-chakra": {
+   "name": "7 Chakra Crystal Tree",
+   "surat": 1350,
+   "bangalore": 2025,
+   "mrp_surat": 1800,
+   "mrp_bangalore": 2700
+  },
+  "shree-yantra-brass": {
+   "name": "Shree Yantra (Brass)",
+   "surat": 1100,
+   "bangalore": 1650,
+   "mrp_surat": 1500,
+   "mrp_bangalore": 2250
+  }
+ },
+ "services": {
+  "reiki-healing": {
+   "name": "Reiki Healing Session",
+   "surat": 500,
+   "bangalore": 750
+  },
+  "crystal-healing": {
+   "name": "Crystal Healing Therapy",
+   "surat": 600,
+   "bangalore": 900
+  },
+  "evil-eye": {
+   "name": "Evil Eye (Nazar) Removal",
+   "surat": 500,
+   "bangalore": 750
+  },
+  "meditation": {
+   "name": "Guided Meditation Class",
+   "surat": 500,
+   "bangalore": 750
+  },
+  "student-exams": {
+   "name": "Reiki for Students (Exams)",
+   "surat": 200,
+   "bangalore": 300
+  },
+  "discovery-call": {
+   "name": "Free Discovery Call (15 min)",
+   "surat": 0,
+   "bangalore": 0
+  }
+ },
+ "courses": {
+  "reiki-123": {
+   "name": "Reiki Level 1, 2 & 3 Certification",
+   "surat": null,
+   "bangalore": null
+  },
+  "reiki-advance": {
+   "name": "Reiki Advance Healer",
+   "surat": null,
+   "bangalore": null
+  },
+  "reiki-master": {
+   "name": "Reiki Master",
+   "surat": null,
+   "bangalore": null
+  },
+  "grand-master": {
+   "name": "Reiki Grand Master",
+   "surat": null,
+   "bangalore": null
+  },
+  "crystal-reiki": {
+   "name": "Crystal Reiki",
+   "surat": null,
+   "bangalore": null
+  },
+  "vedic-numerology": {
+   "name": "Vedic Numerology",
+   "surat": null,
+   "bangalore": null
+  }
+ }
+}

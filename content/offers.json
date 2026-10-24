@@ -1,0 +1,25 @@
+{
+ "_help": "Offers show on the website for every visitor. 'cities' can be [\"surat\"], [\"bangalore\"] or both. An offer disappears by itself after its 'until' date (YYYY-MM-DD). Leave 'until' empty for no end date. 'link' is where the button goes (use /book, /shop, /courses, /bracelets or a full https link). Run `npm run build` after editing.",
+ "bar": {
+  "surat": { "text": "Bengaluru Reiki Seminar: register free for a seat", "link": "/bangalore/seminar", "cta": "Reserve" },
+  "bangalore": { "text": "Heal Stress & Anxiety with Reiki: Bengaluru seminar, free registration", "link": "/bangalore/seminar", "cta": "Reserve seat" }
+ },
+ "offers": [
+  {
+   "title": "Free 15-minute discovery call",
+   "text": "Not sure what you need? Talk to a healer first. No charge, no obligation.",
+   "cta": "Book the free call",
+   "link": "/book?path=free",
+   "cities": ["surat", "bangalore"],
+   "until": ""
+  },
+  {
+   "title": "Crystal bracelets below MRP",
+   "text": "Every natural crystal bracelet is priced below MRP and Reiki-charged before dispatch.",
+   "cta": "Shop bracelets",
+   "link": "/shop",
+   "cities": ["surat", "bangalore"],
+   "until": ""
+  }
+ ]
+}

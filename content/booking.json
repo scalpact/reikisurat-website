@@ -1,0 +1,15 @@
+{
+ "_help": "Booking calendar. days: 0 = Sunday, 1 = Monday ... 6 = Saturday. times use 24-hour HH:MM. 'dates' (YYYY-MM-DD list) overrides 'days' when not empty, use it to open only specific dates. 'closed' lists holidays. daysAhead = how far ahead people can book. Run `npm run build` after editing.",
+ "daysAhead": 21,
+ "minHoursNotice": 3,
+ "surat": {
+  "offline": { "days": [1, 2, 3, 4, 5, 6], "dates": [], "times": ["10:00", "11:00", "12:00", "15:00", "16:00", "17:00"] },
+  "online": { "days": [0, 1, 2, 3, 4, 5, 6], "dates": [], "times": ["08:00", "09:00", "10:00", "11:00", "12:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00"] },
+  "closed": []
+ },
+ "bangalore": {
+  "offline": { "days": [5, 6, 0], "dates": [], "times": ["10:00", "11:30", "15:00", "16:30"] },
+  "online": { "days": [0, 1, 2, 3, 4, 5, 6], "dates": [], "times": ["08:00", "09:00", "10:00", "11:00", "12:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00"] },
+  "closed": []
+ }
+}

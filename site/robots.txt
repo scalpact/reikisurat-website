@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /checkout
+Disallow: /bangalore/checkout
+Disallow: /api/
+
+Sitemap: https://reikisurat.in/sitemap.xml
