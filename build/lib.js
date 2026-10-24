@@ -95,7 +95,7 @@ function topbar(C) {
 
 function cityMenu(C, alt) {
   return Object.values(CITIES).map(x => `<a href="${esc(alt[x.key])}" data-set-city="${x.key}"${x.key === C.key ? ' aria-current="true"' : ''}>
-      <span class="cm-ico">${ic('solar:map-point-bold-duotone')}</span><span><b>${x.label}</b><small>${x.key === 'surat' ? 'Adajan centre · since 2014' : 'New branch · Dr. Varun Patel'}</small></span>${x.key === C.key ? ic('solar:check-circle-bold', 'cm-on') : ''}</a>`).join('');
+      <span class="cm-ico">${ic('solar:map-point-bold-duotone')}</span><span><b>${x.label}</b><small>${x.key === 'surat' ? 'Adajan centre · since 2014' : 'Dr. Varun Patel · Reiki Grand Master'}</small></span>${x.key === C.key ? ic('solar:check-circle-bold', 'cm-on') : ''}</a>`).join('');
 }
 
 function header(C, cur, alt) {
@@ -120,7 +120,7 @@ ${topbar(C)}
   <nav aria-label="Mobile">${[['home', u(C, '/'), 'Home']].concat(navFor(C)).concat(EVENT.active ? [['seminar', '/bangalore/seminar', 'Bengaluru Seminar']] : []).map(([k, h, t]) => `<a href="${h}"${k === cur ? ' aria-current="page"' : ''}>${t}${ic('solar:alt-arrow-right-linear')}</a>`).join('')}</nav>
   <div class="mnav-ft">
     <a class="btn btn-pri btn-block" href="${u(C, '/book')}">${ic('solar:calendar-mark-bold')} Book a session</a>
-    <a class="btn btn-wa btn-block" ${waAttrs(C, 'general')}>${ic('ph:whatsapp-logo-fill')} WhatsApp ${C.label}</a>
+    <a class="btn btn-wa btn-block" ${waAttrs(C, 'general')}>${ic('logos:whatsapp-icon')} WhatsApp ${C.label}</a>
     <p class="mnav-city">${ic('solar:map-point-bold')} You are viewing the <b>${C.label}</b> centre. <button type="button" class="linkbtn" data-city-open>Change</button></p>
   </div>
 </div>`;
@@ -128,7 +128,7 @@ ${topbar(C)}
 
 function footer(C, cur) {
   const centre = x => `<div class="ftr-centre">
-      <h2>${x.label} ${x.key === 'bangalore' ? '<span class="tagnew">New</span>' : ''}</h2>
+      <h2>${x.label}</h2>
       ${x.addressLines.length ? `<address>${x.addressLines.join('<br>')}</address>` : `<p>${x.full}. Address shared on WhatsApp when you book.</p>`}
       <p><a href="tel:${x.phoneRaw}">${ic('solar:phone-bold')} ${x.phone}</a></p>
       <p><a href="${esc(waUrl(x.wa, MSG.general(x)))}" target="_blank" rel="noopener">${ic('logos:whatsapp-icon')} WhatsApp</a> · <a href="${x.instagram}" target="_blank" rel="noopener">${ic('logos:instagram-icon')} ${x.igHandle}</a></p>
@@ -162,16 +162,16 @@ function footer(C, cur) {
   </div>
 </footer>
 <nav class="mbar" aria-label="Quick actions">
-  <a href="${u(C, '/healing')}"${cur === 'healing' ? ' aria-current="page"' : ''}>${ic('solar:hand-heart-linear')}<span>Healing</span></a>
-  <a href="${u(C, '/courses')}"${cur === 'courses' ? ' aria-current="page"' : ''}>${ic('solar:square-academic-cap-linear')}<span>Courses</span></a>
+  <a href="${u(C, '/healing')}"${cur === 'healing' ? ' aria-current="page"' : ''}>${ic('solar:hand-heart-bold-duotone')}<span>Healing</span></a>
+  <a href="${u(C, '/courses')}"${cur === 'courses' ? ' aria-current="page"' : ''}>${ic('solar:square-academic-cap-bold-duotone')}<span>Courses</span></a>
   <a class="mbar-book" href="${u(C, '/book')}"${cur === 'book' ? ' aria-current="page"' : ''}><i>${ic('solar:calendar-add-bold')}</i><span>Book</span></a>
-  <a href="${u(C, '/shop')}"${cur === 'shop' ? ' aria-current="page"' : ''}>${ic('solar:stars-linear')}<span>Crystals</span></a>
-  <a class="mbar-wa" ${waAttrs(C, 'general')}>${ic('ph:whatsapp-logo')}<span>WhatsApp</span></a>
+  <a href="${u(C, '/shop')}"${cur === 'shop' || cur === 'bracelets' ? ' aria-current="page"' : ''}>${ic('ph:diamond-duotone')}<span>Crystals</span></a>
+  <a class="mbar-wa" ${waAttrs(C, 'general')}>${ic('logos:whatsapp-icon')}<span>WhatsApp</span></a>
 </nav>
 <div class="drawer-bg" data-cart-close hidden></div>
 <aside class="drawer" id="cart" aria-label="Your cart" aria-hidden="true" inert>
   <div class="drawer-hd"><h2>Your cart</h2><button class="icon-btn" type="button" data-cart-close aria-label="Close cart">${ic('solar:close-square-linear')}</button></div>
-  <p class="drawer-city">${ic('solar:map-point-bold')} ${C.label} prices</p>
+  <p class="drawer-city">${ic('solar:map-point-bold')} ${C.label}</p>
   <div class="drawer-body" data-cart-items></div>
   <div class="drawer-ft" data-cart-foot hidden>
     <div class="sum-row"><span>Subtotal</span><b data-cart-subtotal>₹0</b></div>
@@ -188,7 +188,7 @@ function footer(C, cur) {
     <p>Prices, timings and WhatsApp change with the centre. You can switch any time from the top of the page.</p>
     <div class="picker-opts">
       <button type="button" data-pick="surat">${ic('solar:map-point-bold-duotone')}<b>Surat</b><small>Adajan centre · since 2014</small></button>
-      <button type="button" data-pick="bangalore">${ic('solar:map-point-bold-duotone')}<b>Bengaluru</b><small>New branch · Dr. Varun Patel</small></button>
+      <button type="button" data-pick="bangalore">${ic('solar:map-point-bold-duotone')}<b>Bengaluru</b><small>Dr. Varun Patel · Reiki Grand Master</small></button>
     </div>
     ${EVENT.active ? `<a class="picker-semi" href="/bangalore/seminar" data-set-city="bangalore">${ic('solar:ticket-bold-duotone')}<span>Scanned the seminar poster? <b>Reserve your seat</b></span>${ic('solar:arrow-right-linear')}</a>` : ''}
   </div>

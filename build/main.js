@@ -28,7 +28,7 @@
     $$('[data-pp]').forEach(function (el) { var p = S.products[el.dataset.pp]; if (p) el.textContent = inr(p.p.bangalore); });
     $$('.city-btn span').forEach(function (s) { s.innerHTML = '<small>Centre</small>' + B.label; });
     $$('.city-menu a').forEach(function (a) { var on = a.dataset.setCity === 'bangalore'; a.toggleAttribute('aria-current', on); });
-    $$('.drawer-city').forEach(function (p) { p.lastChild.textContent = ' ' + B.label + ' prices'; });
+    $$('.drawer-city').forEach(function (p) { p.lastChild.textContent = ' ' + B.label; });
     C = B;
   }
 

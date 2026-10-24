@@ -62,7 +62,7 @@ const faqLd = qa => ({ '@context': 'https://schema.org', '@type': 'FAQPage', mai
 const crumbs = items => `<nav class="crumbs" aria-label="Breadcrumb"><ol>${items.map(([t, h], i) => i < items.length - 1 ? `<li><a href="${h}">${esc(t)}</a></li>` : `<li aria-current="page">${esc(t)}</li>`).join('')}</ol></nav>`;
 const faqHtml = qa => `<div class="faq">${qa.map(([q, a]) => `<details><summary>${esc(q)}${ic('solar:alt-arrow-down-linear')}</summary><p>${esc(a)}</p></details>`).join('')}</div>`;
 const pageHead = (h1, lead, cr, extra = '') => `<section class="phead"><div class="wrap">${cr}<h1>${h1}</h1>${lead ? `<p class="lead">${lead}</p>` : ''}${extra}</div></section>`;
-const waBtn = (C, cls, label, key, ...a) => `<a class="btn ${cls}" ${waAttrs(C, key, ...a)}>${ic('ph:whatsapp-logo-fill')} ${label}</a>`;
+const waBtn = (C, cls, label, key, ...a) => `<a class="btn ${cls}" ${waAttrs(C, key, ...a)}>${ic('logos:whatsapp-icon')} ${label}</a>`;
 const stars = () => `<span class="stars" aria-hidden="true">${ic('solar:star-bold').repeat(5)}</span>`;
 const sec = (h, p, extra = '') => `<div class="sec-hd" data-anim><div><h2>${h}</h2>${p ? `<p>${p}</p>` : ''}</div>${extra}</div>`;
 
@@ -86,12 +86,12 @@ function pcard(C, p, i = 0) {
 function courseCard(C, c, i) {
   const fee = feeC(C, c.id);
   return `<article class="ccard" data-anim>
-    <a class="ccard-img" href="${u(C, '/courses')}#${c.id}" tabindex="-1" aria-hidden="true">${img3d(c.img, '', '(min-width: 900px) 30vw, 80vw')}${c.step ? `<span class="ccard-step">Level ${c.step}</span>` : ''}</a>
+    <a class="ccard-img" href="${u(C, '/courses')}#${c.id}" tabindex="-1" aria-hidden="true">${img3d(c.img, '', '(min-width: 900px) 30vw, 80vw')}</a>
     <div class="ccard-b">
       <h3><a href="${u(C, '/courses')}#${c.id}">${c.name}</a></h3>
       <p class="ccard-meta">${c.days ? `${ic('solar:calendar-linear')} ${c.days} days` : `${ic('solar:calendar-linear')} Duration on enquiry`}<span>·</span>${c.req === 'None' || c.req.startsWith('None') ? 'Open to all' : 'After ' + c.req}</p>
       <p class="ccard-fee">${fee ? `<b>${inr(fee)}</b> course fee` : 'Fee &amp; next batch on WhatsApp'}</p>
-      <div class="ccard-act"><a class="btn btn-wa btn-sm" ${waAttrs(C, 'course', c, fee)}>${ic('ph:whatsapp-logo-fill')} Enquire</a><a class="btn btn-out btn-sm" href="${u(C, '/courses')}#${c.id}">Details</a></div>
+      <div class="ccard-act"><a class="btn btn-wa btn-sm" ${waAttrs(C, 'course', c, fee)}>${ic('logos:whatsapp-icon')} Enquire</a><a class="btn btn-out btn-sm" href="${u(C, '/courses')}#${c.id}">Details</a></div>
     </div>
   </article>`;
 }
@@ -111,7 +111,7 @@ function svcRow(C, s) {
 function personCard(id, big) {
   const t = TEAM[id];
   return `<article class="person${big ? ' person-lg' : ''}" data-anim>
-    <div class="person-img">${img('team-c/' + id, t.name, { w: 480, h: 600 })}</div>
+    <div class="person-img">${img('team-c/' + id, t.name, { w: 480, h: 640 })}</div>
     <div class="person-b"><h3>${t.name}${t.cred ? ` <small>(${t.cred})</small>` : ''}</h3><p class="role">${t.role}</p><p>${t.bio}</p></div>
   </article>`;
 }
@@ -125,7 +125,7 @@ function reviewsBlock(C) {
   return `<section class="sec reviews" id="reviews">
   <div class="wrap">
     <div class="rv-head" data-anim>
-      <div><h2>What our students and clients say</h2><p>${C.key === 'bangalore' ? 'Reviews from our Surat centre on Google. Same Grand Masters, same teaching in Bengaluru.' : 'Real reviews from Google, written by people who came to the centre.'}</p></div>
+      <div><h2>What our students and clients say</h2><p>${C.key === 'bangalore' ? 'Reviews from our Surat centre on Google. The same teaching and care in Bengaluru.' : 'Real reviews from Google, written by people who came to the centre.'}</p></div>
       <a class="gbadge" href="${g.reviews}" target="_blank" rel="noopener">${ic('logos:google-icon', 'gbadge-g')}<span><b>${g.rating}</b>${stars()}<small>${g.count} Google reviews</small></span></a>
     </div>
   </div>
@@ -153,7 +153,7 @@ function offersBlock(C) {
   <div class="wrap">
     ${sec('Current offers', `Offers for the ${C.label} centre. New offers appear here first.`)}
     <div class="of-grid">${list.map(o => `<article class="of" data-anim data-until="${o.until || ''}">${ic('solar:gift-bold-duotone', 'of-ico')}<div><h3>${esc(o.title)}</h3><p>${esc(o.text)}</p>${o.until ? `<p class="of-until">Valid till ${fmtDate(o.until)}</p>` : ''}</div><a class="btn btn-out btn-sm" href="${esc(o.link.startsWith('/') && !o.link.startsWith('/bangalore') && !o.link.startsWith('/blog') ? u(C, o.link) : o.link)}">${esc(o.cta || 'View')}</a></article>`).join('')}
-      <article class="of of-join" data-anim>${ic('logos:whatsapp-icon', 'of-ico')}<div><h3>Get offers on WhatsApp</h3><p>Join our WhatsApp list for new offers, seminars and course batches. One tap, no spam.</p></div><a class="btn btn-wa btn-sm" ${waAttrs(C, 'offers')}>${ic('ph:whatsapp-logo-fill')} Join the list</a></article>
+      <article class="of of-join" data-anim>${ic('logos:whatsapp-icon', 'of-ico')}<div><h3>Get offers on WhatsApp</h3><p>Join our WhatsApp list for new offers, seminars and course batches. One tap, no spam.</p></div><a class="btn btn-wa btn-sm" ${waAttrs(C, 'offers')}>${ic('logos:whatsapp-icon')} Join the list</a></article>
     </div>
   </div>
 </section>`;
@@ -168,7 +168,7 @@ function seminarBand(C, compact) {
     <div class="semi-b">
       <p class="eyebrow">${ic('solar:ticket-bold-duotone')} ${esc(EVENT.kicker)}</p>
       <h2>${esc(EVENT.title)}</h2>
-      <p>With Reiki Grand Masters Dr. Chirag Gajjar (PhD) and Dr. Varun Patel (PhD). ${EVENT.fee ? `Registration ${inr(EVENT.fee)}.` : 'Free registration.'}</p>
+      <p>With Reiki Grand Master Dr. Chirag Gajjar (PhD) and Reiki Grand Master Dr. Varun Patel (PhD). ${EVENT.fee ? `Registration ${inr(EVENT.fee)}.` : 'Free registration.'}</p>
       <p class="semi-when">${ic('solar:calendar-linear')} ${when}</p>
       <span class="btn btn-pri">Reserve your seat ${ic('solar:arrow-right-linear', 'ico-go')}</span>
     </div>
@@ -185,7 +185,7 @@ function visitBand(C) {
       <table class="hours"><tbody>${C.hours.map(h => `<tr><th scope="row">${h[0]}</th><td>${h[1]}</td></tr>`).join('')}</tbody></table>
       <div class="btn-col">
         ${C.map ? `<a class="btn btn-dark" href="${C.map}" target="_blank" rel="noopener">${ic('solar:map-arrow-right-bold')} Get directions</a>` : `<a class="btn btn-dark" href="${u(C, '/book')}">${ic('solar:calendar-mark-bold')} Book a visit</a>`}
-        <a class="btn btn-wa" ${waAttrs(C, 'visit')}>${ic('ph:whatsapp-logo-fill')} WhatsApp ${C.phone}</a>
+        <a class="btn btn-wa" ${waAttrs(C, 'visit')}>${ic('logos:whatsapp-icon')} WhatsApp ${C.phone}</a>
         <a class="btn btn-out" href="${C.instagram}" target="_blank" rel="noopener">${ic('logos:instagram-icon')} ${C.igHandle}</a>
       </div>
     </div>
@@ -222,17 +222,17 @@ function home(C) {
   const minSvc = Math.min(...SERVICES.map(s => priceS(C, s.id)));
   const g = CITIES.surat.google;
   const isB = C.key === 'bangalore';
-  const masters = isB ? ['varun-patel', 'chirag-gajjar'] : ['chirag-gajjar'];
+  const master = isB ? 'varun-patel' : 'chirag-gajjar';
   const chips = Object.entries(INTENTS).map(([k, v]) => `<a class="chip" href="${u(C, '/shop')}?need=${k}">${ic(v.icon)}${v.label}</a>`).join('');
-  const latest = (isB ? POSTS.filter(p => /bangalore|bengaluru|online|seminar/i.test(p.slug)) : POSTS).slice(0, 3);
+  const latest = POSTS.filter(p => isB ? /bangalore|bengaluru|online|seminar/i.test(p.slug) : /surat/i.test(p.slug)).slice(0, 3);
   const body = `
 <section class="hero">
   <div class="hero-bg" aria-hidden="true"></div>
   <div class="wrap hero-in">
     <div class="hero-copy">
-      <p class="eyebrow" data-hero>${ic('solar:map-point-bold')} ${isB ? 'Bengaluru · New branch' : 'Surat · Adajan · Since 2014'}</p>
-      <h1 data-hero>${isB ? 'Reiki healing, courses and crystals, now in <em>Bengaluru</em>' : 'Reiki healing, courses and crystals in <em>Surat</em>'}</h1>
-      <p class="hero-sub" data-hero>${isB ? 'Heal and learn with Reiki Grand Masters <b>Dr. Varun Patel</b> and <b>Dr. Chirag Gajjar</b>. Sessions in Bengaluru or online, and Reiki-charged crystals delivered to your door.' : 'Heal and learn with Reiki Grand Master <b>Dr. Chirag Gajjar</b> and his team. Sessions at our Adajan centre or online, and Reiki-charged crystals delivered across India.'}</p>
+      <p class="eyebrow" data-hero>${ic('solar:map-point-bold')} ${isB ? 'Bengaluru, Karnataka' : 'Surat · Adajan · Since 2014'}</p>
+      <h1 data-hero>${isB ? 'Reiki healing, courses and crystals in <em>Bengaluru</em>' : 'Reiki healing, courses and crystals in <em>Surat</em>'}</h1>
+      <p class="hero-sub" data-hero>${isB ? 'Heal and learn with Reiki Grand Master <b>Dr. Varun Patel</b> and founder <b>Dr. Chirag Gajjar</b>. Sessions in Bengaluru or online, and Reiki-charged crystals delivered to your door.' : 'Heal and learn with Reiki Grand Master <b>Dr. Chirag Gajjar</b> and his team. Sessions at our Adajan centre or online, and Reiki-charged crystals delivered across India.'}</p>
       <div class="hero-cta" data-hero>
         <a class="btn btn-pri btn-lg" href="${u(C, '/book')}">${ic('solar:calendar-mark-bold')} Book a session</a>
         <a class="btn btn-out btn-lg" href="${u(C, '/book')}?path=free">Free 15-min call</a>
@@ -245,8 +245,8 @@ function home(C) {
     <div class="hero-art" data-art>
       <div class="hero-main">${img3d('3d/course-reiki-123', 'Reiki healing hands holding a glowing light', '(min-width: 1000px) 46vw, 100vw', true)}</div>
       <div class="hero-gm">
-        <div class="hero-faces">${masters.map(id => img('team-c/' + id, TEAM[id].name, { w: 480, h: 600 })).join('')}</div>
-        <p><b>${masters.length > 1 ? 'Two Reiki Grand Masters' : 'Dr. Chirag Gajjar (PhD)'}</b><span>${masters.length > 1 ? 'Dr. Varun Patel · Dr. Chirag Gajjar' : 'Reiki Grand Master · 25+ years'}</span></p>
+        <div class="hero-face">${img('team-c/' + master, TEAM[master].name, { w: 480, h: 640 })}</div>
+        <p><b>${TEAM[master].name} (PhD)</b><span>Reiki Grand Master${isB ? ' · Bengaluru' : ' · 25+ years'}</span></p>
       </div>
     </div>
   </div>
@@ -268,7 +268,7 @@ ${isB ? seminarBand(C) : ''}
 
 <section class="sec sec-cream" id="courses">
   <div class="wrap">
-    ${sec('Learn Reiki from Grand Masters', `Usui Reiki from Level 1 to Grand Master, with attunement and a certificate at every level. ${C.courseMode}.`, `<a class="link-more" href="${u(C, '/courses')}">All courses ${ic('solar:arrow-right-linear')}</a>`)}
+    ${sec('Learn Reiki from a Reiki Grand Master', `Usui Reiki from Level 1 to Grand Master, with attunement and a certificate at every level. ${C.courseMode}.`, `<a class="link-more" href="${u(C, '/courses')}">All courses ${ic('solar:arrow-right-linear')}</a>`)}
     <div class="rail" data-rail>${COURSES.map((c, i) => courseCard(C, c, i)).join('')}</div>
     <div class="rail-dots" data-rail-dots aria-hidden="true"></div>
   </div>
@@ -312,7 +312,7 @@ ${offersBlock(C)}
 
 <section class="sec sec-cream">
   <div class="wrap">
-    ${sec(isB ? 'Reiki guides for Bengaluru' : 'From our blog', 'Short, practical reading on Reiki, chakras and everyday healing.', `<a class="link-more" href="/blog">All articles ${ic('solar:arrow-right-linear')}</a>`)}
+    ${sec(isB ? 'Reiki guides for Bengaluru' : 'Reiki guides for Surat', 'Short, practical reading on Reiki, chakras and everyday healing.', `<a class="link-more" href="/blog">All articles ${ic('solar:arrow-right-linear')}</a>`)}
     <div class="bgrid">${latest.map(blogCard).join('')}</div>
   </div>
 </section>
@@ -320,7 +320,7 @@ ${offersBlock(C)}
 ${visitBand(C)}`;
   const title = isB ? 'Reiki in Bangalore | Reiki Healing, Reiki Courses & Crystals | Shree Sai Reiki Bengaluru'
     : 'Reiki in Surat | Reiki Healing, Courses & Crystal Bracelets | Shree Sai Yog & Reiki Healing Centre';
-  const desc = isB ? 'Reiki healing sessions, Reiki courses (Level 1 to Grand Master) and Reiki-charged crystal bracelets in Bangalore with Reiki Grand Masters Dr. Varun Patel and Dr. Chirag Gajjar. Book online or WhatsApp +91 79751 31189.'
+  const desc = isB ? 'Reiki healing sessions, Reiki courses (Level 1 to Grand Master) and Reiki-charged crystal bracelets in Bangalore with Reiki Grand Master Dr. Varun Patel and founder Dr. Chirag Gajjar. Book online or WhatsApp +91 79751 31189.'
     : 'Reiki healing, Reiki courses (Level 1 to Grand Master) and Reiki-charged crystal bracelets in Adajan, Surat with Reiki Grand Master Dr. Chirag Gajjar. 4.9★ on Google. Book online or WhatsApp +91 97265 81787.';
   write(outFile(C, 'index.html'), layout({ C, key: 'home', path: u(C, '/'), body, title, desc, alt: altFor('/'),
     schema: [bizLd(C), { '@context': 'https://schema.org', '@type': 'WebSite', name: SITE.name, url: SITE.url + '/' }] }), { priority: '1.0' });
@@ -346,7 +346,7 @@ ${pageHead(`Reiki healing sessions in ${C.label}`, 'Clear, fixed prices. Book on
         <p class="srow-meta">${ic('solar:clock-circle-linear')} ${s.mins} min ${s.modes.map(m => `<span class="mode mode-${m}">${m === 'online' ? 'Online' : C.key === 'bangalore' ? 'In person' : 'In centre'}</span>`).join('')}</p>
         <p>${s.text}</p>
         <p class="svc-good"><b>Helpful for:</b> ${s.good.join(', ')}</p>
-        <div class="svc-act"><a class="btn btn-pri" href="${u(C, '/book')}?service=${s.id}">Book now</a><a class="btn btn-wa-out" ${waAttrs(C, 'service', s, pr)}>${ic('ph:whatsapp-logo-fill')} Ask</a></div>
+        <div class="svc-act"><a class="btn btn-pri" href="${u(C, '/book')}?service=${s.id}">Book now</a><a class="btn btn-wa-out" ${waAttrs(C, 'service', s, pr)}>${ic('logos:whatsapp-icon')} Ask</a></div>
       </div>
     </article>`; }).join('')}</div>
   </div>
@@ -396,11 +396,10 @@ function courses(C) {
 ${pageHead(`Reiki courses in ${C.label}`, `Learn Usui Reiki from Level 1 to Grand Master. Every level includes attunement and a certificate. ${C.courseMode}.`, crumbs([['Home', u(C, '/')], ['Courses', u(C, '/courses')]]))}
 <section class="sec">
   <div class="wrap">
-    <nav class="cnav" aria-label="Courses on this page">${COURSES.map(c => `<a href="#${c.id}">${c.step ? `<i>${c.step}</i>` : ''}${c.short}</a>`).join('')}</nav>
+    <nav class="cnav" aria-label="Courses on this page">${COURSES.map(c => `<a href="#${c.id}">${c.short}</a>`).join('')}</nav>
     <div class="courses">${COURSES.map(c => { const fee = feeC(C, c.id); return `<article class="course" id="${c.id}" data-anim>
       <div class="course-img">${img3d(c.img, c.name, '(min-width: 900px) 42vw, 100vw')}</div>
       <div class="course-b">
-        ${c.step ? `<span class="course-n">Level ${c.step} of 4</span>` : '<span class="course-n alt">Specialisation</span>'}
         <h2>${c.name}</h2>
         <ul class="facts">
           <li>${ic('solar:calendar-bold-duotone')}<span><small>Duration</small>${c.days ? c.days + ' days' : 'On enquiry'}</span></li>
@@ -410,6 +409,7 @@ ${pageHead(`Reiki courses in ${C.label}`, `Learn Usui Reiki from Level 1 to Gran
         </ul>
         <p>${c.text}</p>
         <ul class="ticks">${c.learn.map(l => `<li>${ic('solar:check-circle-bold')} ${l}</li>`).join('')}</ul>
+        ${c.levels ? `<div class="levels">${c.levels.map((l, i) => `<details class="lvl"${i === 0 ? ' open' : ''}><summary><span class="lvl-n">${i + 1}</span><span><b>${l.t}</b><small>${l.d}</small></span>${ic('solar:alt-arrow-down-linear')}</summary><ul>${l.points.map(x => `<li>${x}</li>`).join('')}</ul></details>`).join('')}</div>` : ''}
         <div class="btn-row">${waBtn(C, 'btn-wa', 'Enquire on WhatsApp', 'course', c, fee)}</div>
       </div>
     </article>`; }).join('')}</div>
@@ -437,7 +437,7 @@ function shop(C) {
   const needBtns = [['all', 'All']].concat(Object.entries(INTENTS).map(([k, v]) => [k, v.label]))
     .map(([k, t]) => `<button type="button" class="fbtn" data-need="${k}" aria-pressed="${k === 'all'}">${k === 'all' ? '' : ic(INTENTS[k].icon)}${t}</button>`).join('');
   const body = `
-${pageHead('Crystal shop', `Natural crystals and bracelets, Reiki-charged before dispatch. Showing <b>${C.label}</b> prices.`, crumbs([['Home', u(C, '/')], ['Crystal shop', u(C, '/shop')]]))}
+${pageHead('Crystal shop', `Natural crystals and bracelets, Reiki-charged before dispatch.`, crumbs([['Home', u(C, '/')], ['Crystal shop', u(C, '/shop')]]))}
 <section class="sec shop">
   <div class="wrap">
     <div class="filters" role="group" aria-label="Filter by need"><p class="filters-l">I need help with</p><div class="fbtns">${needBtns}</div></div>
@@ -583,7 +583,7 @@ ${pageHead('DOB, numerology &amp; customized bracelets', 'Three kinds of persona
         <label>Full name<input name="name" required autocomplete="name" maxlength="80"></label>
         <div class="f2"><label>Date of birth<input name="dob" type="date" required max="${TODAY}"></label><label>Time of birth<input name="time" type="time" required></label></div>
         <label>Place of birth<input name="place" required maxlength="80" placeholder="City, state"></label>
-        <button class="btn btn-wa btn-lg" type="submit">${ic('ph:whatsapp-logo-fill')} Send on WhatsApp</button>
+        <button class="btn btn-wa btn-lg" type="submit">${ic('logos:whatsapp-icon')} Send on WhatsApp</button>
       </form>
     </div>
   </div>
@@ -600,7 +600,7 @@ ${pageHead('DOB, numerology &amp; customized bracelets', 'Three kinds of persona
         <fieldset class="checks"><legend>What do you want help with? <span class="req">(up to 3)</span></legend>${purposes.map(x => `<label><input type="checkbox" name="goal" value="${esc(x)}"> ${esc(x)}</label>`).join('')}</fieldset>
         <div class="f2"><label>Date of birth <span class="req">(optional)</span><input name="dob" type="date" max="${TODAY}"></label><label>Time of birth <span class="req">(optional)</span><input name="time" type="time"></label></div>
         <label>Anything else? <span class="req">(optional)</span><textarea name="note" maxlength="300" rows="3"></textarea></label>
-        <button class="btn btn-wa btn-lg" type="submit">${ic('ph:whatsapp-logo-fill')} Send on WhatsApp</button>
+        <button class="btn btn-wa btn-lg" type="submit">${ic('logos:whatsapp-icon')} Send on WhatsApp</button>
       </form>
     </div>
   </div>
@@ -641,14 +641,14 @@ function book(C) {
           <label>Mobile number<input name="phone" type="tel" required inputmode="numeric" autocomplete="tel-national" pattern="[6-9][0-9]{9}" maxlength="10" placeholder="10-digit number"></label></div>
           <label>Best time to call<select name="when"><option>Morning (9 AM – 12 PM)</option><option>Afternoon (12 – 4 PM)</option><option>Evening (4 – 8 PM)</option></select></label>
           <label>What would you like help with? <span class="req">(optional)</span><textarea name="note" rows="3" maxlength="300"></textarea></label>
-          <button class="btn btn-wa btn-lg btn-block" type="submit">${ic('ph:whatsapp-logo-fill')} Request my free call</button>
+          <button class="btn btn-wa btn-lg btn-block" type="submit">${ic('logos:whatsapp-icon')} Request my free call</button>
         </form>
       </div>
 
       <div class="bk-step" data-step="loc" hidden>
         <button type="button" class="bk-back" data-back>${ic('solar:alt-arrow-left-linear')} Back</button>
         <h2>Which centre?</h2>
-        <div class="opts">${CL.map(x => card(`data-set="city" data-val="${x.key}"`, 'solar:map-point-bold-duotone', x.label, x.key === 'surat' ? 'Adajan centre · since 2014' : 'New branch · Dr. Varun Patel')).join('')}</div>
+        <div class="opts">${CL.map(x => card(`data-set="city" data-val="${x.key}"`, 'solar:map-point-bold-duotone', x.label, x.key === 'surat' ? 'Adajan centre · since 2014' : 'Dr. Varun Patel · Reiki Grand Master')).join('')}</div>
       </div>
 
       <div class="bk-step" data-step="mode" hidden>
@@ -707,7 +707,7 @@ function book(C) {
         <dl class="bk-sum" data-done-sum></dl>
         <div class="done-next" data-done-next></div>
         <div class="btn-col">
-          <a class="btn btn-wa btn-lg" data-done-wa href="#" target="_blank" rel="noopener">${ic('ph:whatsapp-logo-fill')} Send details to the centre</a>
+          <a class="btn btn-wa btn-lg" data-done-wa href="#" target="_blank" rel="noopener">${ic('logos:whatsapp-icon')} Send details to the centre</a>
           <div class="btn-row cal-row" data-cal hidden><a class="btn btn-out" data-gcal href="#" target="_blank" rel="noopener">${ic('logos:google-calendar')} Google Calendar</a><button type="button" class="btn btn-out" data-ical>${ic('solar:calendar-add-linear')} Apple / Outlook (.ics)</button></div>
           <a class="btn btn-out" href="${u(C, '/')}">Back to home</a>
         </div>
@@ -745,7 +745,7 @@ function seminar() {
       ${crumbs([['Bengaluru', '/bangalore'], ['Seminar', '/bangalore/seminar']])}
       <p class="eyebrow">${ic('solar:ticket-bold-duotone')} ${esc(EVENT.kicker)}</p>
       <h1>${esc(EVENT.title)}</h1>
-      <p class="lead">A live Reiki seminar in Bengaluru with Reiki Grand Masters <b>Dr. Chirag Gajjar (PhD)</b> and <b>Dr. Varun Patel (PhD)</b>. Learn simple ways to calm stress and anxiety, and receive Reiki attunement in person.</p>
+      <p class="lead">A live Reiki seminar in Bengaluru with Reiki Grand Master <b>Dr. Chirag Gajjar (PhD)</b> and Reiki Grand Master <b>Dr. Varun Patel (PhD)</b>. Learn simple ways to calm stress and anxiety, and receive Reiki attunement in person.</p>
       <ul class="ev-facts">
         <li>${ic('solar:calendar-bold-duotone')}<span><small>Date &amp; time</small>${when}</span></li>
         <li>${ic('solar:map-point-bold-duotone')}<span><small>Venue</small>${EVENT.venue ? esc(EVENT.venue) : 'Bengaluru (shared on WhatsApp)'}</span></li>
@@ -759,7 +759,7 @@ function seminar() {
 <section class="sec-tight"><div class="wrap"><ul class="ev-stats">${STATS.map(s => `<li><b>${s[0]}</b><span>${s[1]}</span></li>`).join('')}</ul></div></section>
 <section class="sec">
   <div class="wrap">
-    ${sec('What you will learn', 'Six themes from the Grand Masters, in one session.')}
+    ${sec('What you will learn', 'Six themes, in one session.')}
     <div class="topics">${EVENT.topics.map((t, i) => `<div class="topic" data-anim><span class="topic-n">${String(i + 1).padStart(2, '0')}</span><h3>${esc(t.t)}</h3><p>${esc(t.d)}</p></div>`).join('')}</div>
     <p class="ev-ben" data-anim>${EVENT.benefits.map(b => `<span>${ic('solar:check-circle-bold')} ${esc(b)}</span>`).join('')}</p>
   </div>
@@ -787,13 +787,13 @@ function seminar() {
         <div class="f2"><label>Your area in Bengaluru <span class="req">(optional)</span><input name="area" maxlength="60" placeholder="e.g. Whitefield"></label>
         <label>How did you hear about us?<select name="src"><option>Poster / QR code</option><option>Instagram</option><option>Friend or family</option><option>Google</option><option>Other</option></select></label></div>
         <p class="co-err" data-seat-err role="alert" hidden></p>
-        <button class="btn btn-pri btn-lg btn-block" type="submit">${EVENT.fee ? `${ic('solar:lock-keyhole-minimalistic-bold')} Pay ${inr(EVENT.fee)} &amp; reserve` : `${ic('ph:whatsapp-logo-fill')} Confirm my seat on WhatsApp`}</button>
+        <button class="btn btn-pri btn-lg btn-block" type="submit">${EVENT.fee ? `${ic('solar:lock-keyhole-minimalistic-bold')} Pay ${inr(EVENT.fee)} &amp; reserve` : `${ic('logos:whatsapp-icon')} Confirm my seat on WhatsApp`}</button>
       </form>
       <div class="reg-done" data-seat-done hidden>
         ${ic('solar:check-circle-bold', 'done-ico')}
         <h3>Almost done</h3>
         <p>WhatsApp has opened with your details. Tap <b>Send</b> and our Bengaluru team will confirm your seat.</p>
-        <a class="btn btn-wa btn-block" data-seat-wa href="#" target="_blank" rel="noopener">${ic('ph:whatsapp-logo-fill')} Open WhatsApp again</a>
+        <a class="btn btn-wa btn-block" data-seat-wa href="#" target="_blank" rel="noopener">${ic('logos:whatsapp-icon')} Open WhatsApp again</a>
       </div>
     </div>
   </div>
@@ -808,7 +808,7 @@ function seminar() {
   write('bangalore/seminar.html', layout({ C, key: 'seminar', path: '/bangalore/seminar', body, og: '/assets/img/events/bengaluru-seminar-poster.webp',
     alt: { surat: '/bangalore/seminar', bangalore: '/bangalore/seminar' },
     title: 'Reiki Seminar in Bangalore | Heal Stress & Anxiety with Reiki | Free Registration',
-    desc: 'Bengaluru Reiki seminar with Reiki Grand Masters Dr. Chirag Gajjar (PhD) and Dr. Varun Patel (PhD): attunement, distance healing, stress relief. Reserve your seat on WhatsApp +91 79751 31189.', schema }), { priority: '0.9' });
+    desc: 'Bengaluru Reiki seminar with Reiki Grand Master Dr. Chirag Gajjar (PhD) and Dr. Varun Patel (PhD): attunement, distance healing, stress relief. Reserve your seat on WhatsApp +91 79751 31189.', schema }), { priority: '0.9' });
 }
 
 /* ================= ABOUT ================= */
@@ -817,7 +817,7 @@ function about(C) {
 ${pageHead('About us', `${SITE.legal}: a Reiki healing and training centre started in Surat in ${SITE.since} by Dr. Chirag Gajjar and Binal Gajjar, now also in Bengaluru.`, crumbs([['Home', u(C, '/')], ['About', u(C, '/about')]]))}
 <section class="sec">
   <div class="wrap about-in">
-    <div class="about-photo" data-anim>${img('people/chirag-portrait', 'Dr. Chirag Gajjar seated in meditation at the centre', { w: 980, h: 1225 })}</div>
+    <div class="about-photo" data-anim>${img('people/chirag-suit', 'Dr. Chirag Gajjar, Reiki Grand Master', { w: 900, h: 1200 })}</div>
     <div data-anim>
       <p class="eyebrow">Founder</p>
       <h2>Dr. Chirag Gajjar (PhD)</h2>
@@ -838,7 +838,7 @@ ${awardsBlock()}
 <section class="sec sec-cream">
   <div class="wrap">
     ${sec('Moments from the centre', '')}
-    <div class="moments">${MOMENTS.map(m => `<figure data-anim>${img(m.img + '-640', m.t)}<figcaption>${m.t}</figcaption></figure>`).join('')}</div>
+    <div class="moments">${MOMENTS.map(m => `<figure data-anim>${img(m.img + (m.img.includes('portrait') ? '' : '-640'), m.t)}<figcaption>${m.t}</figcaption></figure>`).join('')}</div>
   </div>
 </section>
 ${reviewsBlock(C)}
@@ -861,7 +861,7 @@ ${pageHead(`Contact the ${C.label} centre`, 'WhatsApp is the fastest way to reac
       <a class="cc" ${waAttrs(C, 'general')}>${ic('logos:whatsapp-icon')}<b>WhatsApp</b><span>${C.phone}</span></a>
       <a class="cc" href="tel:${C.phoneRaw}">${ic('solar:phone-calling-bold-duotone', 'cc-call')}<b>Call</b><span>${C.phone}</span></a>
       <a class="cc" href="${C.instagram}" target="_blank" rel="noopener">${ic('logos:instagram-icon')}<b>Instagram</b><span>${C.igHandle}</span></a>
-      <a class="cc" href="mailto:${SITE.email}">${ic('solar:letter-bold-duotone', 'cc-mail')}<b>Email</b><span>${SITE.email}</span></a>
+      <a class="cc" href="mailto:${SITE.email}">${ic('logos:google-gmail')}<b>Email</b><span>${SITE.email}</span></a>
     </div>
     <div class="contact-in">
       <form class="pform cform" data-wa-form="contact">
@@ -870,7 +870,7 @@ ${pageHead(`Contact the ${C.label} centre`, 'WhatsApp is the fastest way to reac
         <label>Your name<input name="name" required autocomplete="name" maxlength="80"></label>
         <label>I want to ask about<select name="topic"><option>Healing session</option><option>Reiki course</option><option>Crystals and bracelets</option><option>An order I placed</option><option>Bengaluru seminar</option><option>Something else</option></select></label>
         <label>Message<textarea name="note" rows="4" maxlength="500" required></textarea></label>
-        <button class="btn btn-wa btn-lg" type="submit">${ic('ph:whatsapp-logo-fill')} Send on WhatsApp</button>
+        <button class="btn btn-wa btn-lg" type="submit">${ic('logos:whatsapp-icon')} Send on WhatsApp</button>
       </form>
       <div class="contact-info">
         <h2>${C.label} centre</h2>
@@ -893,7 +893,7 @@ ${C.mapEmbed ? `<section class="map-full"><iframe title="Map to the ${C.label} c
 function checkout(C) {
   const states = ['Gujarat', 'Karnataka', 'Maharashtra', 'Rajasthan', 'Madhya Pradesh', 'Delhi', 'Tamil Nadu', 'Telangana', 'Andhra Pradesh', 'Kerala', 'West Bengal', 'Uttar Pradesh', 'Bihar', 'Punjab', 'Haryana', 'Odisha', 'Jharkhand', 'Chhattisgarh', 'Assam', 'Goa', 'Himachal Pradesh', 'Uttarakhand', 'Jammu and Kashmir', 'Chandigarh', 'Puducherry', 'Dadra and Nagar Haveli and Daman and Diu', 'Tripura', 'Meghalaya', 'Manipur', 'Mizoram', 'Nagaland', 'Arunachal Pradesh', 'Sikkim', 'Ladakh', 'Andaman and Nicobar Islands', 'Lakshadweep'];
   const body = `
-<section class="phead slim"><div class="wrap"><h1>Checkout</h1><p class="small">${ic('solar:map-point-bold')} ${C.label} prices</p></div></section>
+<section class="phead slim"><div class="wrap"><h1>Checkout</h1><p class="small">${ic('solar:map-point-bold')} ${C.label}</p></div></section>
 <section class="sec co" data-checkout>
   <div class="wrap co-in" data-co-main>
     <form class="pform co-form" data-co-form novalidate>
@@ -926,7 +926,7 @@ function checkout(C) {
     <h2>Thank you, your order is placed</h2>
     <p>Payment received. Order reference: <b data-co-ref></b></p>
     <p>We will Reiki-charge and pack your crystals and send tracking details to your mobile number.</p>
-    <div class="btn-row"><a class="btn btn-wa" data-co-wa href="#" target="_blank" rel="noopener">${ic('ph:whatsapp-logo-fill')} Send order details on WhatsApp</a><a class="btn btn-out" href="${u(C, '/shop')}">Continue shopping</a></div>
+    <div class="btn-row"><a class="btn btn-wa" data-co-wa href="#" target="_blank" rel="noopener">${ic('logos:whatsapp-icon')} Send order details on WhatsApp</a><a class="btn btn-out" href="${u(C, '/shop')}">Continue shopping</a></div>
   </div>
 </section>`;
   write(outFile(C, 'checkout.html'), layout({ C, key: 'checkout', path: u(C, '/checkout'), body, noindex: true, alt: altFor('/checkout'), title: 'Checkout | Shree Sai Reiki', desc: 'Secure checkout.' }), { sitemap: false });
@@ -968,7 +968,7 @@ ${pageHead('Reiki &amp; healing blog', 'Practical articles on Reiki, chakras, cr
       <p class="post-by">Written by the team at ${SITE.name} (Surat &amp; Bengaluru). Reiki supports healing; it does not replace medical care.</p>
     </div>
     <aside class="post-side">
-      <div class="side-box"><h2>Talk to a healer</h2><p>Questions about this topic? The first 15-minute call is free.</p><a class="btn btn-pri btn-block" href="/book?path=free">Book a free call</a><a class="btn btn-wa-out btn-block" ${waAttrs(C, 'article', p.title)}>${ic('ph:whatsapp-logo-fill')} Ask on WhatsApp</a></div>
+      <div class="side-box"><h2>Talk to a healer</h2><p>Questions about this topic? The first 15-minute call is free.</p><a class="btn btn-pri btn-block" href="/book?path=free">Book a free call</a><a class="btn btn-wa-out btn-block" ${waAttrs(C, 'article', p.title)}>${ic('logos:whatsapp-icon')} Ask on WhatsApp</a></div>
       <div class="side-box"><h2>Crystals that may help</h2>${picks.map(s => { const x = P[s]; return `<a class="mini" href="${purl(C, x)}">${img('products/' + x.img[0] + '-480', x.name)}<span><b>${esc(x.name)}</b><i data-pp="${x.slug}">${inr(priceP(C, x.slug))}</i></span></a>`; }).join('')}<a class="link-more" href="/shop">Visit the crystal shop ${ic('solar:arrow-right-linear')}</a></div>
     </aside>
   </div>

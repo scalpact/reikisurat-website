@@ -37,7 +37,7 @@ const CITIES = {
     courseMode: 'At our Adajan centre', seo: 'Surat'
   },
   bangalore: {
-    key: 'bangalore', label: 'Bengaluru', full: 'Bengaluru, Karnataka', prefix: '/bangalore', badge: 'New branch',
+    key: 'bangalore', label: 'Bengaluru', full: 'Bengaluru, Karnataka', prefix: '/bangalore', badge: 'Bengaluru',
     phone: '+91 79751 31189', phoneRaw: '+917975131189', wa: '917975131189',
     instagram: 'https://www.instagram.com/shree.sai.reiki.bengaluru/', igHandle: '@shree.sai.reiki.bengaluru',
     // No public address yet (sessions run from a private location). Add the centre address here once it opens.
@@ -93,12 +93,17 @@ const COURSES = [
   { id: 'reiki-123', name: 'Reiki Level 1, 2 & 3 Certification', short: 'Reiki Level 1–3', img: '3d/course-reiki-123', days: 63, step: 1,
     req: 'None. Open to everyone',
     text: 'The complete Usui Reiki foundation in one programme: self-healing, healing family members and distance healing, with attunements by the Grand Master.',
-    learn: ['Level 1: self-healing and hand positions', 'Level 2: Reiki symbols and distance healing', 'Level 3: deeper practice and attunement', 'A daily practice routine for home'] },
+    learn: ['Three attunements, one at each level', 'Healing yourself, your family and people far away', 'A daily practice routine for home', 'Certificate at the end of each level'],
+    levels: [
+      { t: 'Level 1 · First Degree', d: 'Your first step into Reiki: healing yourself.', points: ['What Reiki is, the Usui lineage and the five Reiki principles', 'Level 1 attunement by the Grand Master', 'Hand positions for all seven chakras for self-healing', 'Giving Reiki to family and friends by touch', 'A 21-day self-healing practice to clear old blocks'] },
+      { t: 'Level 2 · Second Degree', d: 'Reiki becomes stronger and works at a distance.', points: ['Level 2 attunement', 'The three Reiki symbols: power, emotional-mental healing and distance', 'Distance healing for people in other cities or abroad', 'Healing emotions, habits and past situations', 'Protecting yourself, your home and your work place'] },
+      { t: 'Level 3 · Third Degree', d: 'Deeper practice and steady, faster results.', points: ['Level 3 attunement', 'Deeper Reiki meditation and stronger energy flow', 'Chakra balancing and aura cleansing', 'Healing long-standing problems step by step', 'Using Reiki for goals: health, study, money and relationships'] }
+    ] },
   { id: 'reiki-advance', name: 'Reiki Advance Healer', short: 'Advance Healer', img: '3d/course-advance', days: 21, step: 2,
     req: 'Reiki Level 3',
     text: 'For students who have finished Level 3 and want stronger, faster results when they heal themselves and others.',
     learn: ['Advanced healing techniques', 'Healing for specific problems', 'Protection techniques'] },
-  { id: 'reiki-master', name: 'Reiki Master', short: 'Reiki Master', img: '3d/course-master', days: 30, step: 3,
+  { id: 'reiki-master', name: 'Reiki Master', short: 'Reiki Master', img: '3d/course-master', days: 21, step: 3,
     req: 'Reiki Advance Healer',
     text: 'The teacher level. Learn to give attunements and teach Reiki to others in the Usui lineage.',
     learn: ['Master symbol and the attunement process', 'How to teach and run classes', 'Healing at master level'] },
@@ -106,7 +111,7 @@ const COURSES = [
     req: 'Reiki Master',
     text: 'The highest level in our lineage, for Reiki Masters who want to train and attune other masters.',
     learn: ['Grand Master attunement', 'Training and attuning Reiki Masters', 'Mass and group healing'] },
-  { id: 'crystal-reiki', name: 'Crystal Reiki', short: 'Crystal Reiki', img: '3d/course-crystal', days: 30, step: 0,
+  { id: 'crystal-reiki', name: 'Crystal Reiki', short: 'Crystal Reiki', img: '3d/course-crystal', days: 7, step: 0,
     req: 'Reiki Level 1 to 3',
     text: 'Combine Reiki with crystals: which stone to use for which problem, how to cleanse and charge crystals, and how to build crystal grids.',
     learn: ['Choosing crystals by chakra and problem', 'Cleansing and charging crystals', 'Crystal grids and layouts'] },
@@ -155,6 +160,7 @@ const MOMENTS = [
   { img: 'events/mass-healing-2025', t: '11:11 mass healing at the Aayush Conclave, Surat' },
   { img: 'events/group-meditation', t: 'Group meditation at the centre' },
   { img: 'events/attunement', t: 'A Reiki attunement' },
+  { img: 'people/chirag-portrait', t: 'Dr. Chirag Gajjar at the centre' },
   { img: 'people/chirag-cave', t: 'Meditation retreat' }
 ];
 
@@ -188,7 +194,11 @@ const BLOG_IMG = {
   'reiki-for-stress-burnout-bangalore': '3d/svc-meditation-720',
   'distance-reiki-healing-online': '3d/svc-distance-720',
   'crystal-bracelets-bangalore-how-to-choose': '3d/course-crystal-720',
-  'reiki-seminar-what-to-expect': '3d/course-master-720'
+  'reiki-seminar-what-to-expect': '3d/course-master-720',
+  'reiki-in-surat-guide': '3d/svc-reiki-720',
+  'reiki-course-in-surat': '3d/course-advance-720',
+  'crystal-bracelets-surat-guide': '3d/svc-crystal-720',
+  'reiki-for-stress-anxiety-surat': '3d/svc-meditation-720'
 };
 
 module.exports = { SITE, CITIES, INTENTS, CATS, BESTSELLERS, SERVICES, DISCOVERY, COURSES, TEAM, REVIEWS, STATS, AWARDS, MOMENTS, BLOG_IMG };

@@ -28,7 +28,7 @@ About 21 days, after Level 3. Advanced techniques for specific problems, faster 
 
 ### Reiki Master
 
-About 30 days, after Advance Healer. This is the teacher level: the master symbol, how attunements are given, and how to teach.
+About 21 days, after Advance Healer. This is the teacher level: the master symbol, how attunements are given, and how to teach.
 
 ### Reiki Grand Master
 
@@ -36,12 +36,12 @@ The highest level in our lineage, for Reiki Masters who want to train and attune
 
 ### Two specialisations
 
-- **Crystal Reiki:** which stone to use for which problem, cleansing and charging crystals, crystal grids.
+- **Crystal Reiki (7 days):** which stone to use for which problem, cleansing and charging crystals, crystal grids.
 - **Vedic Numerology:** birth, destiny and name numbers, Lo Shu grid and remedies.
 
 ## What is an attunement?
 
-An attunement is the moment the teacher opens your energy channels to Reiki. It is quiet and simple: you sit with eyes closed while the master works. Many students feel warmth or deep calm. In our lineage, attunements are given by the Grand Masters, in person or at a distance.
+An attunement is the moment the teacher opens your energy channels to Reiki. It is quiet and simple: you sit with eyes closed while the master works. Many students feel warmth or deep calm. In our lineage, attunements are given by a Reiki Grand Master, in person or at a distance.
 
 ## Learning in Bengaluru or online
 

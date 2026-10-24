@@ -6,13 +6,13 @@ excerpt: Going to the Bengaluru Reiki seminar "Heal Stress and Anxiety with Reik
 ---
 ## A seminar is the easiest way to experience Reiki
 
-Not everyone is ready to book a private session or a full course. A seminar lets you hear the Grand Masters, ask questions, try simple techniques and experience Reiki in a group, all in one sitting.
+Not everyone is ready to book a private session or a full course. A seminar lets you hear a Reiki Grand Master, ask questions, try simple techniques and experience Reiki in a group, all in one sitting.
 
-Our Bengaluru seminar, **Heal Stress and Anxiety with Reiki**, is led by Reiki Grand Masters Dr. Chirag Gajjar (PhD) and Dr. Varun Patel (PhD). Registration is free; you can reserve a seat on the [seminar page](/bangalore/seminar).
+Our Bengaluru seminar, **Heal Stress and Anxiety with Reiki**, is led by Reiki Grand Master Dr. Chirag Gajjar (PhD) and Reiki Grand Master Dr. Varun Patel (PhD). Registration is free; you can reserve a seat on the [seminar page](/bangalore/seminar).
 
 ## What is covered
 
-- **Shaktipaath / attunement:** the Grand Masters give a group attunement.
+- **Shaktipaath / attunement:** a group attunement in person.
 - **Reiki healing for all:** simple self-healing you can practise every day.
 - **Distance healing:** how Reiki is sent to family members far away.
 - **Health support:** using Reiki alongside your doctor's treatment.
